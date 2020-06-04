@@ -7,6 +7,10 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ArticleListComponent } from './article-list/article-list.component';
 import { AboutComponent } from './about/about.component';
+import { ArticleService } from './article.service';
+import { ArticleComponent } from './article/article.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { SharedService } from './shared.service';
 
 @NgModule({
   declarations: [
@@ -14,13 +18,18 @@ import { AboutComponent } from './about/about.component';
     NavBarComponent,
     FooterComponent,
     ArticleListComponent,
-    AboutComponent
+    AboutComponent,
+    ArticleComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    ArticleService,
+    SharedService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
