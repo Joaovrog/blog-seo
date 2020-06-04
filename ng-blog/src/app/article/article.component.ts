@@ -34,10 +34,13 @@ article: Article = new Article();
         this.titleService.setTitle(`${this.article.title} - ${this.sharedService.blogTitle}` );
       });
       this.meta.addTags([
-        {name: "description", content: this.article.description},
-        {property: "og:title", content: `${this.article.title} - ${this.sharedService.blogTitle}`},
-        {property: "og:type", content: "website"},
-        {property: "og:url", content: this.sharedService.baseUrl + this.article.key}
+        {name: 'description', content: this.article.description},
+        {property: 'og:title', content: `${this.article.title} - ${this.sharedService.blogTitle}`},
+        {property: 'og:type', content: "website"},
+        {property: 'og:url', content: this.sharedService.baseUrl + this.article.key},
+        {property: 'og:image', content: this.article.imageUrl},
+        {property: 'og:description', content: this.article.description},
+        {property: 'og:site_name', content: this.sharedService.blogTitle}
 
       ]);
     });
