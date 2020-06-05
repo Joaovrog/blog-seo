@@ -11,6 +11,7 @@ import { ArticleService } from './article.service';
 import { ArticleComponent } from './article/article.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SharedService } from './shared.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SharedService } from './shared.service';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     ArticleService,
