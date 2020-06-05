@@ -12,6 +12,9 @@ import { ArticleComponent } from './article/article.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SharedService } from './shared.service';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ArticleOverviewComponent } from './dashboard/article-overview/article-overview.component';
+import { ArticleEditComponent } from './dashboard/article-edit/article-edit.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { HttpClientModule } from '@angular/common/http';
     ArticleListComponent,
     AboutComponent,
     ArticleComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    DashboardComponent,
+    ArticleOverviewComponent,
+    ArticleEditComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
