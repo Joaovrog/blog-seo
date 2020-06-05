@@ -6,4 +6,6 @@ export class Article {
         key: string;
         date: Date = new Date();
         imageUrl: string;
+        viewCount: number;
+        published: boolean;
 }

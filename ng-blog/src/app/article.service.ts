@@ -15,7 +15,7 @@ getArticles(): Observable<Article[]> {
 }
 
 getArticle(key:string): Observable<Article> {
-    return this.http.get<Article>(environment.apiUrl + '/articles' + key);
+    return this.http.get<Article>(environment.apiUrl + '/articles/' + key);
 }
 
 }
