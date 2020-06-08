@@ -9,14 +9,15 @@ import { ArticleEditComponent } from './dashboard/article-edit/article-edit.comp
 
 
 const routes: Routes = [
-  { path: 'articles', component: ArticleListComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'dashboard/:key', component: ArticleEditComponent },
-  { path: 'about', component: AboutComponent },
-  { path: '404', component: NotFoundComponent },
+  { path: "articles", component: ArticleListComponent },
+  { path: "dashboard", component: DashboardComponent },
+  { path: "dashboard/:key", component: ArticleEditComponent },
+  { path: "dashboard/preview/:key", component: ArticleComponent },
+  { path: "about", component: AboutComponent },
+  { path: "404", component: NotFoundComponent },
   { path: "", component: ArticleListComponent },
-  { path: ':key', component: ArticleComponent},
-  { path: '**', component: NotFoundComponent } // any other route
+  { path: ":key", component: ArticleComponent },
+  { path: "**", component: NotFoundComponent }
 ];
 
 @NgModule({

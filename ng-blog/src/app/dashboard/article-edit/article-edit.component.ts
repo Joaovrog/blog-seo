@@ -45,4 +45,8 @@ export class ArticleEditComponent implements OnInit {
     });
   }
 
+  viewPreview() {
+    this.router.navigateByUrl('/dashboard/preview/' + this.article.key);
+  }
+
 }
