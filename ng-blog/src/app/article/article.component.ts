@@ -25,13 +25,16 @@ article: Article = new Article();
 
     this.route.params.subscribe(params => {
       const key = params.key;
+      console.log("key: " , key)
       this.articleService.getArticle(key).subscribe(article => {
-        if(article === null) {
-          this.router.navigateByUrl('404');
+        console.log("article.key: ", article.key)
+        if (article === null) {
+          this.router.navigateByUrl("404");
           return;
-        };
+        }
         this.article = article;
-        this.titleService.setTitle(`${this.article.title} - ${this.sharedService.blogTitle}` );
+        this.titleService.setTitle(
+          `${this.article.title} - ${this.sharedService.blogTitle}`);
       });
       this.meta.addTags([
         {name: 'description', content: this.article.description},

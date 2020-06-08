@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'dashboard/:key', component: ArticleEditComponent },
   { path: 'about', component: AboutComponent },
   { path: '404', component: NotFoundComponent },
-  { path: '', component: ArticleListComponent },
+  { path: "", component: ArticleListComponent },
   { path: ':key', component: ArticleComponent},
   { path: '**', component: NotFoundComponent } // any other route
 ];

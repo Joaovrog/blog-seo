@@ -10,6 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ArticleEditComponent implements OnInit {
   article: Article = null;
+  saved = false;
 
 
   constructor(
@@ -34,5 +35,14 @@ export class ArticleEditComponent implements OnInit {
       this.article = article;
     });
   };
+
+  updateArticle(): void {
+    this.saved = false;
+
+    this.dashboardService.updateArticle(this.article).subscribe(result => {
+      this.article = result;
+      this.saved = true;
+    });
+  }
 
 }

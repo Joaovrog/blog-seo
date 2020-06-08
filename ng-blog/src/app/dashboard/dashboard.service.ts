@@ -23,4 +23,9 @@ getArticle(key: string): Observable<Article> {
   return this.http.get<Article>(environment.apiUrl + '/dashboard/article/' + key);
 }
 
+updateArticle(article: Article): Observable<Article> {
+  return this.http.put<Article>(environment.apiUrl + "/dashboard/article",
+  article);
+}
+
 }
